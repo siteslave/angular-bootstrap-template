@@ -1,0 +1,19 @@
+<div class="text-center">
+  <form class="form-signin">
+    <h1 class="h3 mb-3 font-weight-normal">เข้าสู่ระบบ</h1>
+    <label for="inputUsername" class="sr-only">ชื่อผู้ใช้งาน</label>
+    <input type="text" id="inputUsername" name="username" [(ngModel)]="username" class="form-control"
+      placeholder="ชื่อผู้ใช้งาน" required autofocus>
+    <label for="inputPassword" class="sr-only">รหัสผ่าน</label>
+    <input type="password" id="inputPassword" name="password" [(ngModel)]="password" class="form-control"
+      placeholder="รหัสผ่าน" required>
+    <div class="checkbox mb-3">
+      <label>
+        <input type="checkbox" value="remember-me"> จำชื่อฉันไว้
+      </label>
+    </div>
+    <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="doLogin()"
+      [disabled]="!username || !password">เข้าสู่ระบบ</button>
+    <p class="mt-5 mb-3 text-muted">&copy; 2018-2019</p>
+  </form>
+</div>
